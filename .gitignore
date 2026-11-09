@@ -1,0 +1,12 @@
+node_modules/
+*.tgz
+
+# Local configuration and transient files, never release inputs.
+retry-rules.json
+pi-retry-rules.json
+*.local.json
+*.tmp
+*.lock
+.env
+.env.*
+!.env.example

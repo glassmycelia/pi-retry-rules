@@ -1,0 +1,29 @@
+{
+  "name": "pi-retry-rules",
+  "version": "0.4.1",
+  "description": "Configurable native retry rules and manual context-only retry commands for Pi.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glassmycelia/pi-retry-rules.git"
+  },
+  "homepage": "https://github.com/glassmycelia/pi-retry-rules#readme",
+  "bugs": { "url": "https://github.com/glassmycelia/pi-retry-rules/issues" },
+  "engines": { "node": ">=22.19.0" },
+  "keywords": ["pi-package", "retry"],
+  "files": ["index.js", "rules.js", "i18n.js", "README.md", "docs/readme/zhCN/README.md", "LICENSE"],
+  "pi": { "extensions": ["./index.js"] },
+  "scripts": {
+    "test": "node --test --test-timeout=15000 test/*.test.js",
+    "check": "node --check index.js && node --check rules.js && node --check i18n.js && npm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "1.5.0",
+    "@earendil-works/pi-coding-agent": "1.5.0"
+  }
+}
